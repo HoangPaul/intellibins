@@ -1,7 +1,6 @@
 @import "font";
 @import "util";
 @import "colour";
-@import "section";
 
 * {
   font-family: "Roboto","Helvetica","Arial",sans-serif;
@@ -105,11 +104,6 @@ header {
   }
 }
 
-footer {
-  background-color: $brand-black;
-  color: #eee;
-}
-
 .actions {
   max-width: 400px;
   margin: 0 auto;
@@ -133,4 +127,16 @@ footer {
     background: rgba(255, 255, 255, 0.3);
 
   }
+}
+
+.section {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+footer {
+  background-color: $brand-black;
+  color: #eee;
 }
