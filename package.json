@@ -9,8 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "fs-extra": "^1.0.0",
     "gulp": "^3.9.1",
     "gulp-compile-handlebars": "^0.6.1",
+    "gulp-copy": "^0.0.2",
+    "gulp-imagemin": "^3.1.1",
     "gulp-rename": "^1.2.2",
     "gulp-rev": "^7.1.2",
     "gulp-sass": "^2.3.2",

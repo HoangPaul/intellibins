@@ -2,4 +2,5 @@ node_modules
 
 build
 tmp
-*.css
+src/**/*.css
+*.map
