@@ -1,0 +1,136 @@
+@import "font";
+@import "util";
+@import "colour";
+@import "section";
+
+* {
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  word-wrap:break-word;
+  white-space: normal;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-size: 56px;
+  line-height: 1.35;
+  letter-spacing: -.02em;
+  margin: 24px 0;
+  word-wrap:break-word;
+  white-space: normal;
+}
+
+h2 {
+  font-size: 45px;
+  line-height: 48px;
+  word-wrap:break-word;
+  white-space: normal;
+}
+
+h1,
+h2 {
+  text-align: center;
+
+  small {
+    display: block;
+    font-size: 40%;
+  }
+}
+
+p {
+  font-size: 16px;
+}
+
+a {
+  color: $brand-accent;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+header {
+  @extend %clearfix;
+  background-color: $brand-primary;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+.title {
+    text-align: left;
+    float: left;
+    color: white;
+    text-decoration: none;
+
+  h1 {
+    margin: 0;
+    font-size: 30px;
+    letter-spacing: 1px;
+  }
+}
+
+.hero {
+  @extend %clearfix;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #eee;
+
+  h1 {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  img {
+    margin: 0 auto;
+    width: 600px;
+  }
+}
+
+.bg-team-photo {
+  color: white;
+  min-height: 500px;
+
+  background-image: url("../images/team-photo.jpg");
+  background-size: contain;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+
+  .text-on-image {
+  }
+}
+
+footer {
+  background-color: $brand-black;
+  color: #eee;
+}
+
+.actions {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+
+  .fa {
+    margin-left: 5px;
+  }
+}
+
+.btn {
+  border: 1px solid white;
+  background-color: transparent;
+  padding: 8px 20px;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.3);
+
+  }
+}

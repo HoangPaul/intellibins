@@ -1,0 +1,3 @@
+[submodule "src/spotless_web_frontend"]
+	path = src/spotless_web_frontend
+	url = git@github.com:PatrickShaw/spotless_web_frontend.git
