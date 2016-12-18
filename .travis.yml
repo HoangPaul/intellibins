@@ -11,7 +11,7 @@ after_success: |
     git checkout -b gh-pages
     git add .
     git -c user.name='travis' -c user.email='travis' commit -m "Automated push by Travis CI"
-    git subtree push --prefix dist https://HoangPaul:$GITHUB_API_KEY@github.com/HoangPaul/intellibins gh-pages &2>/dev/null
+    git subtree push -q --prefix dist https://$GITHUB_API_KEY@github.com/HoangPaul/intellibins gh-pages &2>/dev/null
     cd "$TRAVIS_BUILD_DIR"
   fi
 cache: yarn
