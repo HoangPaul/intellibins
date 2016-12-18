@@ -3,7 +3,7 @@ node_js:
   - "6.9.1"
 before_script:
   - yarn global add gulp
-  - cd "$TRAVIS_BUILD_DIR" && git clone --branch=gh-pages origin dist
+  - git clone --branch=gh-pages `git remote get-url origin` dist
 script: gulp build
 after_success: |
   if [ -n "$GITHUB_API_KEY" ]; then
