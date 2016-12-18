@@ -3,13 +3,14 @@ node_js:
   - "6.9.1"
 before_script:
   - yarn global add gulp
+  - cd "$TRAVIS_BUILD_DIR" && git clone --branch=gh-pages origin dist
 script: gulp build
 after_success: |
   if [ -n "$GITHUB_API_KEY" ]; then
-    cd "$TRAVIS_BUILD_DIR"
-    git add .
-    git -c user.name='travis' -c user.email='travis' commit -m "Automated push by Travis CI"
-    git subtree push -q --prefix dist https://$GITHUB_API_KEY@github.com/HoangPaul/intellibins gh-pages 2>&1 > /dev/null
+    cd "$TRAVIS_BUILD_DIR/dist"
+    git add --all
+    git -c user.name='travis' -c user.email='travis' commit -m "Automated commit via Travis CI"
+    git push -q https://$GITHUB_API_KEY@github.com/HoangPaul/intellibins gh-pages 2>&1 > /dev/null
     cd "$TRAVIS_BUILD_DIR"
   fi
 cache: yarn
