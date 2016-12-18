@@ -7,8 +7,6 @@ script: gulp build
 after_success: |
   if [ -n "$GITHUB_API_KEY" ]; then
     cd "$TRAVIS_BUILD_DIR"
-    git init
-    git checkout -b gh-pages
     git add .
     git -c user.name='travis' -c user.email='travis' commit -m "Automated push by Travis CI"
     git subtree push -q --prefix dist https://$GITHUB_API_KEY@github.com/HoangPaul/intellibins gh-pages &2>/dev/null
