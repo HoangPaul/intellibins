@@ -7,7 +7,7 @@ var rename = require('gulp-rename');
 var rev = require('gulp-rev');
 var handlebars = require('gulp-compile-handlebars');
 var copy = require('gulp-copy');
-var exec = require('child_process').exec;
+var childProcess = require('child_process');
 var imagemin = require('gulp-imagemin');
 
 gulp.task('build', ['build-static', 'build-web-demo']);
@@ -18,7 +18,7 @@ gulp.task('build-static', ['templates', 'images'], function () {
 });
 
 gulp.task('build-web-demo', function() {
-    exec('cd src/spotless_web_frontend && npm install && npm run build');
+    childProcess.execSync('cd src/spotless_web_frontend && npm install && npm run build');
     return gulp.src('./src/spotless_web_frontend/build/**/*')
         .pipe(gulp.dest('./dist/web-demo'));
 });
