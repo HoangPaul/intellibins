@@ -136,6 +136,17 @@ header {
   padding: 30px 15px;
 }
 
+.source-code-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  .btn {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
 footer {
   background-color: $brand-black;
   color: #eee;
